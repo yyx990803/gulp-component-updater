@@ -14,13 +14,16 @@ var defaults = {
 
 module.exports = function (jsonPath, options) {
 
+    jsonPath = jsonPath || 'component.json'
+    options = options || {}
+
     if (typeof jsonPath === 'object') {
         options = jsonPath
         jsonPath = 'component.json'
     }
     
     jsonPath = path.relative(cwd, jsonPath)
-    options = merge(defaults, options || {})
+    options = merge(defaults, options)
     
     var project = read(jsonPath),
         map = {},

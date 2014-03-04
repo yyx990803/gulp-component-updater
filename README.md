@@ -2,6 +2,8 @@
 
 > Gulp-friendly module to auto add/delete files in your component.json
 
+In a large project in can be annoying to manually add every new file created to `component.json`. This module can be used with [Gulp](http://gulpjs.com) to automatically add/remove files from your `component.json`.
+
 ## Install
 
 ``` bash
@@ -10,16 +12,16 @@ $ npm install component-json-updater --save-dev
 
 ## Usage
 
-This module is [Gulp](http://gulpjs.com) friendly:
-
 ``` js
 var gulp = require('gulp'),
     updater = require('gulp-component-updater')
 
-gulp.watch(
-    ['component.json', 'src/**/*'],
-    updater()
-)
+gulp.task('watch', function () {
+    gulp.watch(
+        ['component.json', 'src/**/*'],
+        updater({ log: true })
+    )
+})
 ```
 
 ## API
