@@ -1,0 +1,9 @@
+{
+  "name": "gulp-component-updater",
+  "version": "0.0.1",
+  "description": "Gulp-friendly module to auto add/delete files in your component.json",
+  "main": "index.js",
+  "author": "Evan You",
+  "license": "MIT",
+  "tags": ["gulpfriendly", "component"]
+}
